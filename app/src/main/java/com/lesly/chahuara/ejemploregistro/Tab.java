@@ -137,6 +137,12 @@ public class Tab extends AppCompatActivity {
         public Fragment getItem(int position) {
             // getItem is called to instantiate the fragment for the given page.
             // Return a PlaceholderFragment (defined as a static inner class below).
+            switch (position){
+                case 0:
+                    Contacts tabContacts = new Contacts();
+                    return tabContacts;
+            }
+
             return PlaceholderFragment.newInstance(position + 1);
         }
 
@@ -150,11 +156,11 @@ public class Tab extends AppCompatActivity {
         public CharSequence getPageTitle(int position) {
             switch (position) {
                 case 0:
-                    return "SECTION 1";
+                    return "CONTACTOS";
                 case 1:
-                    return "SECTION 2";
+                    return "FAVORITOS";
                 case 2:
-                    return "SECTION 3";
+                    return "USUARIOS";
             }
             return null;
         }

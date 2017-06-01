@@ -7,8 +7,8 @@
     <string name="title_activity_registra_usuario">RegistraUsuario</string>
     <string name="title_activity_contacts">Contacts</string>
     <string name="title_activity_favorites">Favorites</string>
-    <string name="messaje_login">Login</string>
 
+    <string name="messaje_login">Login</string>
     <string name="messaje_save">Save</string>
     <string name="messaje_register">Register</string>
 </resources>

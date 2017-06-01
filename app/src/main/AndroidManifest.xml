@@ -20,13 +20,21 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".RegistraUsuario"
+            android:label="@string/title_activity_registra_usuario"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
             android:name=".Tab"
             android:label="@string/title_activity_tab"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".RegistraUsuario"
-            android:label="@string/title_activity_registra_usuario"
+            android:name=".Contacts"
+            android:label="@string/title_activity_contacts"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Favorites"
+            android:label="@string/title_activity_favorites"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

@@ -9,6 +9,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -23,33 +24,50 @@ public class Main extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-    }
-    public void login(View view){
-        EditText user = (EditText) findViewById(R.id.user);
-
-        EditText passsword = (EditText) findViewById(R.id.passsword);
-
-        UserDao userDao = new UserDao();
+        Button btnRegistrar = (Button) findViewById(R.id.btnregistrar);
 
 
 
-        if(userDao.validateUser(user.getText().toString(),passsword.getText().toString())){
+        btnRegistrar.setOnClickListener(new View.OnClickListener(){
 
-            Intent intent = new Intent(this,Tab.class);
+            @Override
 
-            startActivity(intent);
+            public void onClick (View view){
 
-        }else{
+                Intent newform = new Intent(Main.this,Tab.class);
 
-            user.setText("");
+                startActivity(newform);
 
-            passsword.setText("");
+            }});
 
-            Toast.makeText(getApplicationContext(),"Usuario o clave incorrecto", Toast.LENGTH_SHORT).show();
-
-        }
 
     }
+//    public void login(View view){
+//        EditText user = (EditText) findViewById(R.id.user);
+//
+//        EditText passsword = (EditText) findViewById(R.id.passsword);
+//
+//        UserDao userDao = new UserDao();
+//
+//
+//
+//        if(userDao.validateUser(user.getText().toString(),passsword.getText().toString())){
+//
+//            Intent intent = new Intent(this,Tab.class);
+//
+//            startActivity(intent);
+//
+//        }else{
+//
+//            user.setText("");
+//
+//            passsword.setText("");
+//
+//            Toast.makeText(getApplicationContext(),"Usuario o clave incorrecto", Toast.LENGTH_SHORT).show();
+//
+//        }
+//
+//    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
