@@ -42,32 +42,32 @@ public class Main extends AppCompatActivity {
 
 
     }
-//    public void login(View view){
-//        EditText user = (EditText) findViewById(R.id.user);
-//
-//        EditText passsword = (EditText) findViewById(R.id.passsword);
-//
-//        UserDao userDao = new UserDao();
-//
-//
-//
-//        if(userDao.validateUser(user.getText().toString(),passsword.getText().toString())){
-//
-//            Intent intent = new Intent(this,Tab.class);
-//
-//            startActivity(intent);
-//
-//        }else{
-//
-//            user.setText("");
-//
-//            passsword.setText("");
-//
-//            Toast.makeText(getApplicationContext(),"Usuario o clave incorrecto", Toast.LENGTH_SHORT).show();
-//
-//        }
-//
-//    }
+    public void login(View view){
+        EditText user = (EditText) findViewById(R.id.user);
+
+        EditText passsword = (EditText) findViewById(R.id.passsword);
+
+        UserDao userDao = new UserDao();
+
+
+// modificar
+        if(userDao.validateUser(user.getText().toString(),passsword.getText().toString())){
+
+            Intent intent = new Intent(this,Tab.class);
+
+            startActivity(intent);
+
+        }else{
+
+            user.setText("");
+
+            passsword.setText("");
+
+            Toast.makeText(getApplicationContext(),"Usuario o clave incorrecto", Toast.LENGTH_SHORT).show();
+
+        }
+
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
